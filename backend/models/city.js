@@ -4,24 +4,28 @@ const citySchema = new mongoose.Schema(
   {
     city_id: {
       type: Number,
-      // required: true,
+      required: true,
       unique: true,
     },
     city_name: {
       type: String,
-      // required: true,
     },
     city_timeZone: {
+      type: Number,
+    },
+    city_subtitle: {
       type: String,
-      // required: true,
     },
     city_latitude: {
       type: Number,
-      // required: true,
+      required: true,
     },
     city_longitude: {
       type: Number,
-      // required: true,
+      required: true,
+    },
+    important_city: {
+      type: Boolean,
     },
   },
   { collection: "city" }

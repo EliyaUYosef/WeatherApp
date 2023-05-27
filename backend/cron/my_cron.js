@@ -1,11 +1,13 @@
 const cron = require("node-cron");
 const db = require("../config/mongo");
 const City = require("../models/city");
-const { fetchWeatherData } = require("../controllers/city");
+const { fetchWeatherData } = require("../controller");
 
 function start() {
   const interval = CRONS_INTERVAL;
   cron.schedule(`0 */${interval} * * *`, async () => {
+    // hours
+    // cron.schedule(`*/${interval} * * * * *`, async () => {
     console.log("Running |UPLOAD| cron job...");
 
     try {

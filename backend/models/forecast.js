@@ -1,32 +1,38 @@
 const mongoose = require("mongoose");
 
-const forecastSchema = new mongoose.Schema({
-  city_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "City",
-    required: true,
+const forecastSchema = new mongoose.Schema(
+  {
+    city_name: {
+      type: String,
+      required: true,
+    },
+    city_id: {
+      type: Number,
+      required: true,
+    },
+    city_mongo_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "City",
+      required: true,
+    },
+    humidity_time: {
+      type: Date,
+    },
+    humidity_time_dt: {
+      type: Number,
+    },
+    temp: {
+      type: Number,
+    },
+    temp_min: {
+      type: Number,
+    },
+    temp_max: {
+      type: Number,
+    },
   },
-  dt: {
-    type: Date,
-    // required: true,
-  },
-  temp: {
-    type: Number,
-    // required: true,
-  },
-  temp_min: {
-    type: Number,
-    // required: true,
-  },
-  temp_max: {
-    type: Number,
-    // required: true,
-  },
-  humidity: {
-    type: Number,
-    // required: true,
-  },
-});
+  { collection: "forecast" }
+);
 
 const Forecast = mongoose.model("Forecast", forecastSchema);
 

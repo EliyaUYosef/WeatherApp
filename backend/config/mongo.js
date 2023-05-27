@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("./constants");
 require("dotenv").config();
 
 const dbName = "WeatherApp";

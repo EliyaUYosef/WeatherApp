@@ -22,7 +22,7 @@ global.CONVERT_TO_FAHRENHEIT = (temp) => (temp - 32) / 1.8;
 global.CODE_DEBUG_MODE = true;
 global.DB_DEBUG_MODE = true;
 global.CRONS_INTERVAL = 5; // HOURS
-
+global.TEMP_CONVERTER = (kelvin) => kelvin - 273.15;
 global.MOST_INTRESTING_CITIES = [
   "London",
   "Tel Aviv",
