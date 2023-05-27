@@ -1,16 +1,16 @@
 {
   "name": "weatherapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Explanation of the project structure:",
   "main": "index.js",
   "scripts": {
+    "start": "cd backend && yarn start && cd .. && cd frontend && yarn start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EliyaUYosef/WeatherApp.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

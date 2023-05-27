@@ -4,11 +4,12 @@ const cityController = require("./controller");
 
 // Define routes for cities
 router.get("/", (req, res, next) => {
-  const clientIP = req.ip;
-  const userAgent = req.get("user-agent");
+  console.log(req.query);
+  // const clientIP = req.ip;
+  // const userAgent = req.get("user-agent");
 
-  console.log("Client IP:", clientIP);
-  console.log("User Agent:", userAgent);
+  // console.log("Client IP:", clientIP);
+  // console.log("User Agent:", userAgent);
 
   next();
 });
