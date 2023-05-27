@@ -49,11 +49,47 @@ body {
   margin: 10px;
   width: calc(40% - 10px * 2);
 }
-#tempOptionsButton {
+.city-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.order-input {
   float: right;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+.limit-input {
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+.list-control {
+  display: flex;
+  justify-content: center; /* Centers the child elements horizontally */
+  align-items: center; /* Centers the child elements vertically */
+  /* border: yellow 3px solid; */
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.city-list {
+  width: calc(40% - 10px * 2);
+}
+.city-item:hover {
+  margin-right: 1px;
+  margin-left: 1px;
+  background: rgba(0, 133, 222, 0.456);
+  transition: margin 0.4s;
+}
+.city-item {
   margin: 10px;
-  background-color: red;
-  width: calc(30% - 10px * 2);
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 #cityList {
   float: left;
@@ -61,9 +97,100 @@ body {
   background-color: rgb(141, 141, 0);
   width: calc(35% - 10px * 2);
 }
-#fullDetails {
+#weatherData {
   float: right;
   margin: 10px;
   background-color: pink;
-  width: calc(65% - 10px * 2);
+  width: calc(60% - 10px * 2);
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  flex-basis: 40%;
+  font-size: large;
+}
+
+.item:nth-child(1) {
+  font-size: x-large;
+}
+.item:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.item:nth-child(2),
+.item:nth-child(3) {
+  flex-basis: 30%; /* Width for the second and third items */
+}
+.between-temp {
+  border: solid 1px #ffffff;
+  width: 30%;
+}
+.current-weather-description {
+  font-size: x-large;
+}
+.current-weather {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.debug_component {
+  align-items: start;
+  text-align: left;
+  justify-content: left;
+}
+.sun-range {
+  height: 30px;
+
+  background-color: #fff;
+  border-radius: 16px;
+}
+.sun-status {
+  /* display: flex; */
+}
+.sun-range-parent {
+  /* display: inline-block; */
+}
+.sun {
+  color: #ddd;
+}
+.as-title {
+  font-weight: 700;
+  font-size: 105%;
+}
+.search-input {
+  background-color: rgba(13, 0, 255, 0.339);
+  width: calc(100% - 40px);
+  /* height: 50px; */
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.search-input input {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 130%;
+}
+button {
+  /* Add other styles for the button */
+  box-shadow: none; /* Initial box shadow style */
+  transition: box-shadow 0.2s; /* Transition duration for the shadow effect */
+}
+
+button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9); /* Shadow style when the button is pressed */
+}
+button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35); /* Shadow style when the button is pressed */
 }

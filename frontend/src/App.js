@@ -1,30 +1,21 @@
 import "./App.css";
+import React, { useState } from "react";
+import { CityProvider } from "./CityContext";
+import SearchInput from "./components/SearchInput";
+import CityList from "./components/CityList";
+import WeatherData from "./components/WeatherData";
+require("./constants");
 
-function App() {
+const App = () => {
   return (
-    <div className="App" style={{ padding: "10px" }}>
-      <header
-        className="App-header"
-        style={{
-          background: "#eeeeee",
-
-          border: "1px solid black",
-        }}
-      >
-        <div id="navbar">Navbar</div>
-
-        <div id="darkModeButton">dark | light mode</div>
-
-        <div id="tempOptionsButton">C | F</div>
-
-        <div id="searchBar">Search bar & Order options & filters</div>
-        <div id="currentStatus">Weather now-today</div>
-
-        <div id="cityList">City List</div>
-        <div id="fullDetails">all detials</div>
-      </header>
+    <div className="main">
+      <CityProvider>
+        <SearchInput />
+        <WeatherData />
+        <CityList id="cityList" />
+      </CityProvider>
     </div>
   );
-}
+};
 
 export default App;
